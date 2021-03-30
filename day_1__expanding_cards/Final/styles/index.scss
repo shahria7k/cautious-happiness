@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:wght@400;700&display=swap");
+@import "./components/_header";
+
+body {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+}
+
+section {
+    // height: 100vh;
+    margin: 10vh 0;
+    overflow: hidden;
+    @include flexCenter(column);
+}

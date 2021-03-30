@@ -3,44 +3,41 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: "Muli", sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	height: 100vh;
+	font-family: "Muli", sans-serif;
 	margin: 0;
 	overflow: hidden;
-	flex-direction: column;
 }
-.container {
-	display: flex;
+.Container {
 	width: 90vw;
+	display: flex;
 }
 .panel {
+	flex: 0.5;
 	background-size: cover;
-	background-repeat: no-repeat;
 	height: 80vh;
+	background-position: center;
+	background-repeat: no-repeat;
 	border-radius: 50px;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	-ms-border-radius: 50px;
 	-o-border-radius: 50px;
+	margin: 10px;
 	color: #fff;
 	cursor: pointer;
-	flex: 0.5;
-	margin: 10px;
 	position: relative;
-	transition: flex 0.7s ease-in;
-	-webkit-transition: flex 0.7s ease-in;
-	-moz-transition: flex 0.7s ease-in;
-	-ms-transition: flex 0.7s ease-in;
-	-o-transition: flex 0.7s ease-in;
+	transition: flex 0.7s ease-in-out;
+	-webkit-transition: flex 0.7s ease-in-out;
+	-moz-transition: flex 0.7s ease-in-out;
+	-ms-transition: flex 0.7s ease-in-out;
+	-o-transition: flex 0.7s ease-in-out;
 }
 .panel h3 {
 	font-size: 24px;
 	position: absolute;
-	bottom: 20px;
-	left: 20px;
+	left: 60px;
+	bottom: 60px;
 	margin: 0;
 	opacity: 0;
 }
@@ -49,26 +46,18 @@ body {
 }
 .panel.active h3 {
 	opacity: 1;
-	transition: opacity 0.3s ease-in 0.4s;
-	-webkit-transition: opacity 0.3s ease-in 0.4s;
-	-moz-transition: opacity 0.3s ease-in 0.4s;
-	-ms-transition: opacity 0.3s ease-in 0.4s;
-	-o-transition: opacity 0.3s ease-in 0.4s;
+	transition: opacity 0.5s ease-in 0.4s;
+	-webkit-transition: opacity 0.5s ease-in 0.4s;
+	-moz-transition: opacity 0.5s ease-in 0.4s;
+	-ms-transition: opacity 0.5s ease-in 0.4s;
+	-o-transition: opacity 0.5s ease-in 0.4s;
 }
-@media (max-width: 480px) {
+@media (max-width: 450px) {
 	.container {
 		width: 100vw;
 	}
 	.panel:nth-of-type(4),
 	.panel:nth-of-type(5) {
 		display: none;
-	}
-}
-@keyframes shrink {
-	0% {
-		background-size: cover;
-	}
-	100% {
-		background-size: 120% 120%;
 	}
 }
